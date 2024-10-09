@@ -1,0 +1,48 @@
+.bodySize {
+    width: 70%;
+    margin: auto;
+}
+
+.chooseTypeCards {
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adds space between the cards */
+}
+
+/* Style for SmallCard components */
+.smallCard {
+    width: 300px; /* Set a fixed width for rectangular shape */
+    height: 180px; /* Set a fixed height for rectangular shape */
+    border: 1px solid #ddd; /* Border for the card */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures the image doesn't overflow */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column; /* Stack image and content */
+    justify-content: space-between; /* Space out image and text */
+}
+
+.smallCard img {
+    width: 100%; /* Ensure image fills the card width */
+    height: 120px; /* Fixed height for the image */
+    object-fit: cover; /* Maintain aspect ratio without stretching */
+}
+
+.smallCardContent {
+    padding: 10px; /* Space around text */
+    text-align: center; /* Center align text */
+}
+
+@media all and (max-width: 768px) {
+    .chooseTypeCards {
+        width: 100%; /* Ensure full width on smaller screens */
+    }
+    
+    .smallCard {
+        width: 100%; /* Full width for cards on small screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
+}
